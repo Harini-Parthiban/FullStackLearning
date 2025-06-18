@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Harini Parthiban" />
+    <meta name="description" content="myformspage" />
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <link rel="icon" href="image.png" type="image/x-icon">
+    <base href="https://www.google.com" target="_blank" />
+    <title>My Reference Form</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Forms Page</h1>
+    </header>
+    <main>
+      <form
+        name="ReferenceForm"
+        action="https://www.google.com"
+        method="post"
+        autocomplete="on"
+      >
+        <fieldset>
+          <legend>Text inputs</legend>
+          <p>
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </p>
+          <p>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </p>
+          <p>
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              minlength="8"
+              maxlength="20"
+              size="20"
+              required
+            />
+          </p>
+          <p>
+            <label for="pin">PIN:</label>
+            <input
+              type="password"
+              inputmode="numeric"
+              pattern="\d{4}"
+              id="pin"
+              name="pin"
+              placeholder="Enter your PIN"
+              maxlength="4"
+              size="4"
+              required
+            />
+          </p>
+          <p>
+            <label for="url">Your URL:</label>
+            <input
+              type="url"
+              name="url"
+              id="url"
+              placeholder="https://example.com"
+              pattern="https://.*"
+              size="30"
+              required
+            />
+          </p>
+          <p>
+            <label for="message">Describe you:</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Type your message here"
+              spellcheck="true"
+              maxlength="500"
+            ></textarea>
+          </p>
+          <p>
+            <label for="search">Search:</label>
+            <input
+              type="search"
+              id="search"
+              name="search"
+              placeholder="Type your search here"
+            />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Numbers</legend>
+          <p>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="0" max="100" />
+          </p>
+          <p>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" />
+          </p>
+          <p>
+            <label for="birthdate">Date of Birth:</label>
+            <input type="date" id="birthdate" name="birthdate" />
+          </p>
+          <p>
+            <label for="alarm">Alarm Time:</label>
+            <input type="time" id="alarm" name="alarm" />
+          </p>
+          <p>
+            <label for="meeting">Meeting Time:</label>
+            <input type="datetime-local" id="meeting" name="meeting" />
+          </p>
+          <p>
+            <label for="week">Select Week:</label>
+            <input type="week" id="week" name="week" />
+          </p>
+          <p>
+            <label for="month">Select Month:</label>
+            <input type="month" id="month" name="month" />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Selection Controls</legend>
+          <p>
+            <label><input type="radio" name="drink" value="tea" /> Tea</label>
+            <label><input type="radio" name="drink" value="coffee" /> Coffee</label>
+          </p>
+          <p>
+            <label><input type="checkbox" name="subscribe" checked /> Subscribe to newsletter</label>
+          </p>
+          <p>
+            <label for="coffee">Select Coffee:</label>
+            <select id="coffee" name="coffee">
+              <optgroup label="Coffees">
+                <option value="regular coffee">Regular Coffee</option>
+                <option value="iced coffee">Iced Coffee</option>
+              </optgroup>
+              <optgroup label="Espresso Drinks">
+                <option value="latte" selected>Latte</option>
+                <option value="cappuccino">Cappuccino</option>
+              </optgroup>
+              <option value="other">Other</option>
+            </select>
+          </p>
+          <p>
+            <label for="cars">Select Car:</label>
+            <input list="carlist" id="cars" name="cars" />
+            <datalist id="carlist">
+              <option value="Amaze"></option>
+              <option value="XUV"></option>
+              <option value="Nexa"></option>
+            </datalist>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Media</legend>
+          <p>
+            <label for="upload">Upload File:</label>
+            <input type="file" id="upload" name="upload" accept="image/*" />
+          </p>
+          <p>
+            <label for="imgsubmit">Submit Image:</label>
+            <input type="image" id="imgsubmit" name="imgsubmit" src="submit.png" alt="Submit" width="100" height="40" />
+          </p>
+          <p>
+            <input type="hidden" name="token" value="123456789" />
+          </p>
+          <p>
+            <label for="favcolor">Favorite Color:</label>
+            <input type="color" id="favcolor" name="favcolor" />
+          </p>
+          <p>
+            <label for="range">Satisfaction Level:</label>
+            <input type="range" id="range" name="range" value="50" min="0" max="100" oninput="output.value = range.value" />
+            = <output id="output" name="output">50</output>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Buttons</legend>
+          <p>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </p>
+        </fieldset>
+      </form>
+    </main>
+    <footer>All copyrights belongs to Harini &copy;</footer>
+  </body>
+</html>
